@@ -1,0 +1,26 @@
+{
+  "name": "mcp-server-typescript-template",
+  "version": "0.1.0",
+  "description": "A template for creating a MCP server in TypeScript",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "node --loader ts-node/esm src/index.ts",
+    "start": "node dist/index.js",
+    "test": "pnpm run test:integration",
+    "test:unit": "echo 'Unit tests not yet implemented'",
+    "test:integration": "pnpm run build && node test/integration.test.js",
+    "test:direct": "pnpm run build && node test-client.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "@types/node": "24.0.0",
+    "zod": "^3.25.61"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.1",
+    "typescript": "^5.8.3"
+  }
+}
